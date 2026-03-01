@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+.profile-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.profile-container {
+  background: var(--surface);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+/* Header */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  background-color: var(--surface-secondary);
+}
+
+.profile-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+/* Upload Section */
+.profile-upload-section {
+  background-color: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.profile-upload-section h3 {
+  margin-bottom: 1rem;
+  color: var(--on-surface);
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-upload-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-upload-section input[type="file"] {
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.profile-upload-section input[type="file"]::file-selector-button {
+  margin-right: 1rem;
+  border: 1px solid var(--border);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  background-color: var(--surface);
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.profile-upload-section input[type="file"]::file-selector-button:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.profile-upload-section button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-upload-section button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.3);
+}
+
+.profile-upload-section button:disabled {
+  background: linear-gradient(135deg, var(--border), var(--border));
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.error-message {
+  color: #dc2626;
+  margin-top: 0.6rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.info-message {
+  color: var(--success);
+  margin-top: 0.6rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Details */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  color: var(--on-surface-secondary);
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.detail-item span {
+  color: var(--on-surface);
+  word-break: break-word;
+  font-weight: 500;
+  text-align: right;
+}
+
+.detail-item .user-role {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .detail-item span {
+    text-align: left;
+  }
+}

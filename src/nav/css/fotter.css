@@ -1,0 +1,26 @@
+.footer {
+  background: var(--surface);
+  color: var(--on-surface-secondary);
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid var(--border);
+}
+
+.copy-info h6 {
+  margin: 0.4rem 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--on-surface-secondary);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.copyright {
+  font-weight: 500;
+  color: var(--on-surface);
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+}

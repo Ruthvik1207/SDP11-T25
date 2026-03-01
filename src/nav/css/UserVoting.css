@@ -1,0 +1,174 @@
+.user-voting-container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 900px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.voting-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Success Message */
+.success-message {
+  font-family: 'Copperplate', 'Papyrus', fantasy;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 30px;
+  padding: 20px 0;
+  color: #e6301c;
+}
+
+.than1 {
+  text-align: center;
+}
+
+.thank {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Table */
+.voting-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Mobile Card Layout */
+.voting-table thead {
+  display: none;
+}
+
+.voting-table tr {
+  display: block;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.voting-table td {
+  display: block;
+  padding: 15px;
+  text-align: right;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+
+.voting-table td:last-child {
+  border-bottom: none;
+}
+
+.voting-table td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* Member Image */
+.member-image {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin-left: 10px;
+}
+
+/* Radio */
+.radio-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Vote Button */
+.vote-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.vote-button {
+  padding: 12px 30px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vote-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.vote-button:active {
+  transform: scale(0.98);
+}
+
+/* Desktop Table Layout */
+@media (min-width: 768px) {
+
+  .voting-title {
+    font-size: 2rem;
+  }
+
+  .success-message {
+    font-size: 3rem;
+  }
+
+  .voting-table thead {
+    display: table-header-group;
+  }
+
+  .voting-table tr {
+    display: table-row;
+    border: none;
+    background-color: transparent;
+  }
+
+  .voting-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .voting-table td {
+    display: table-cell;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+  }
+
+  .voting-table td::before {
+    display: none;
+  }
+
+  .member-image {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .radio-label {
+    justify-content: center;
+  }
+}
