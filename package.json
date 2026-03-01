@@ -21,7 +21,8 @@
   },
 "scripts": {
   "start": "react-scripts start",
-  "build": "CI=false react-scripts build"
+  "build": "react-scripts build",
+  "build:vercel": "CI=false DISABLE_ESLINT_PLUGIN=true react-scripts build"
 },
   "eslintConfig": {
     "extends": [
